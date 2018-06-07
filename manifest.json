@@ -44,12 +44,6 @@
             "webapps": [
                 {
                     "name": "hac"
-                },
-                {
-                    "name": "mediaweb"
-                },
-                {
-                    "name": "backoffice"
                 }
             ]
         }
