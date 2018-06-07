@@ -1,14 +1,18 @@
 {
-    "commerceSuiteVersion": "6.7.0.1",
-    "modelTModuleVersion": "6.7.0-201804032031",
-    "extensions": [
-        "privacyoverlayeraddon",
-        "yacceleratorstorefront",
-        "backoffice"
-    ],
-    "storeFrontExtension": "yacceleratorstorefront",
-    "storeFrontWebRoot": "/yacceleratorstorefront",
-    "properties": [
+   "commerceSuiteVersion": "6.7.0.1",
+   "extensions": [
+       "yacceleratorstorefront",
+       "backoffice",
+       "platformbackoffice",
+       "electronicsstore",
+       "basecommercebackoffice",       
+       "yacceleratorfulfilmentprocess",
+       "solrfacetsearchbackoffice",
+       "commerceservicesbackoffice"
+   ],
+   "storeFrontExtension": "yacceleratorstorefront",
+   "storeFrontWebRoot": "/yacceleratorstorefront",
+   "properties": [
         {
             "key": "test.property.1",
             "value": "test.property.1.value"
@@ -16,59 +20,47 @@
         {
             "key": "test.property.2",
             "value": "test.property.2.value"
-        },
-        {
-            "key": "test.property.2",
-            "value": "test.property.2.value.in.prod.only",
-            "persona": "prod"
         }
     ],
-    "aspects": [
+   "project": "ps1b",
+   "recipe": "pipeline_b2c_dockerized",
+   "resultingImageVersion": "ps1b",    
+   "aspects": [
         {
-            "name": "hac",
+            "name": "backgroundProcessing",
             "properties": [
                 {
-                    "key": "hac.test.property.1",
-                    "value": "hac.test.property.1.value"
-                },
-                {
-                    "key": "hac.test.property.2",
-                    "value": "hac.test.property.2.value"
-                },
-                {
-                    "key": "hac.test.property.2",
-                    "value": "hac.test.property.2.value.in.stg.only",
-                    "persona": "stg"
-                }
-            ],
-            "webapps": [
-                {
-                    "name": "hac"
-                }
+                    "key": "cluster.node.groups",
+                    "value": "backgroundProcessing"
+                }              
             ]
         },
         {
-            "name": "backoffice",
+            "name": "accstorefront",
             "properties": [
                 {
-                    "key": "backoffice.test.property.1",
-                    "value": "backoffice.test.property.1.value"
+                    "key": "acc.test.property.1",
+                    "value": "acc.1.value"
                 },
                 {
-                    "key": "backoffice.test.property.2",
-                    "value": "backoffice.test.property.2.value"
-                },
-                {
-                    "key": "backoffice.test.property.2",
-                    "value": "backoffice.test.property.2.value.in.stg.only",
-                    "persona": "stg"
-                }
-            ],
-            "webapps": [
-                {
-                    "name": "backoffice"
-                }
+                    "key": "acc.test.property.2",
+                    "value": "acc.2.value"
+                }                
             ]
-        }
+        },
+        {
+            "name": "admin",
+            "properties": [
+                {
+                    "key": "adm.test.property.1",
+                    "value": "adm.1.value"
+                },
+                {
+                    "key": "adm.test.property.2",
+                    "value": "adm.2.value"
+                }                
+            ]
+        }        
     ]
 }
+
