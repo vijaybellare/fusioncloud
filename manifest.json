@@ -47,20 +47,7 @@
                     "value": "acc.2.value"
                 }                
             ]
-        },
-        {
-            "name": "admin",
-            "properties": [
-                {
-                    "key": "adm.test.property.1",
-                    "value": "adm.1.value"
-                },
-                {
-                    "key": "adm.test.property.2",
-                    "value": "adm.2.value"
-                }                
-            ]
-        }        
+        }       
     ]
 }
 
