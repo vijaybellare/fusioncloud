@@ -46,16 +46,29 @@
                     "name": "hac"
                 }
             ]
+        },
+        {
+            "name": "backoffice",
+            "properties": [
+                {
+                    "key": "backoffice.test.property.1",
+                    "value": "backoffice.test.property.1.value"
+                },
+                {
+                    "key": "backoffice.test.property.2",
+                    "value": "backoffice.test.property.2.value"
+                },
+                {
+                    "key": "backoffice.test.property.2",
+                    "value": "backoffice.test.property.2.value.in.stg.only",
+                    "persona": "stg"
+                }
+            ],
+            "webapps": [
+                {
+                    "name": "backoffice"
+                }
+            ]
         }
-    ],
-    "tests": {
-        "extensions": ["privacyoverlayeraddon",
-        "yacceleratorstorefront"],
-        "annotations": ["UnitTests", "IntegrationTests"],
-        "packages": ["de.hybris.infra.*"]
-    },
-    "webTests": {
-        "extensions": ["yacceleratorstorefront"],
-        "excludedPackages": ["de.hybris.platform.*"]
-    }
+    ]
 }
