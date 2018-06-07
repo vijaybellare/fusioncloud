@@ -131,7 +131,7 @@
             ]
         },
         {
-            "name": “backoffice”,
+            "name": "backoffice",
             "properties": [
                 {
                     "key": "acc.test.property.1",
@@ -144,7 +144,7 @@
             ]
         } ,
         {
-            "name": “hac”,
+            "name": "backoffice",
             "properties": [
                 {
                     "key": "acc.test.property.1",
@@ -158,4 +158,3 @@
         }              
     ]
 }
-
