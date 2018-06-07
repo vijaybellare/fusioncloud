@@ -1,14 +1,98 @@
 {
    "commerceSuiteVersion": "6.7.0.1",
    "extensions": [
-       "yacceleratorstorefront",
-       "backoffice",
-       "platformbackoffice",
-       "electronicsstore",
-       "basecommercebackoffice",       
-       "yacceleratorfulfilmentprocess",
-       "solrfacetsearchbackoffice",
-       "commerceservicesbackoffice"
+       "mcc",
+"adaptivesearchsolr",
+"adaptivesearchbackoffice",
+"adaptivesearchsamplesaddon",
+"adaptivesearchwebservices",
+"commerceservicesbackoffice",
+"solrfacetsearchbackoffice",
+"solrserver",
+"yacceleratorcockpits",
+"yacceleratorinitialdata",
+"yacceleratorfulfilmentprocess",
+"yacceleratorstorefront",
+"ycommercewebservices",
+"ycommercewebservicestest",
+"electronicsstore",
+"apparelstore",
+"captchaaddon",
+"acceleratorwebservicesaddon",
+"commerceorgsamplesaddon",
+"orderselfserviceaddon",
+"rulebuilderbackoffice",
+"couponbackoffice",
+"droolsruleengineservices",
+"couponfacades",
+"promotionenginesamplesaddon",
+"assistedservicestorefront",
+"assistedservicewebservices",
+"assistedserviceyprofileaddon",
+"assistedservicecustomerinterestsaddon",
+"assistedservicepromotionaddon",
+"customerticketingaddon",
+"customersupportbackoffice",
+"hybrisanalyticsaddon",
+"eventtrackingwsaddon",
+"profiletagaddon",
+"profileservices",
+"yaasconfigurationbackoffice",
+"textfieldconfiguratortemplatebackoffice",
+"textfieldconfiguratortemplateaddon",
+"cmswebservices",
+"smarteditwebservices",
+"cmssmarteditwebservices",
+"permissionswebservices",
+"smarteditaddon",
+"cmssmartedit",
+"cmsbackoffice",
+"cmsoccaddon",
+"consignmenttrackingaddon",
+"consignmenttrackingmock",
+"consignmenttrackingbackoffice",
+"notificationaddon",
+"customerinterestsaddon",
+"stocknotificationaddon",
+"configurablebundleaddon",
+"viewpersonalizationweb",
+"personalizationcmsweb",
+"personalizationsmartedit",
+"personalizationpromotionssmartedit",
+"personalizationsampledataaddon",
+"personalizationyprofile",
+"personalizationpromotions",
+"personalizationpromotionsweb",
+"personalizationservicesbackoffice",
+"personalizationpromotionsbackoffice",
+"personalizationcmsbackoffice",
+"personalizationintegrationbackoffice",
+"personalizationsearchbackoffice",
+"personalizationsearchsmartedit",
+"personalizationsearchweb",
+"personalizationsearchsamplesaddon",
+"personalizationyprofilesampledataaddon",
+"assistedserviceatddtests",
+"promotionengineatddtests",
+"textfieldconfiguratortemplateatddtests",
+"configurablebundleatddtests",
+"configurablebundlecockpits",
+"pcmbackofficesamplesaddon",
+"b2cangularaddon",
+"xyformscockpits",
+"xyformsbackoffice",
+"xyformsstorefrontcommons",
+"xyformssamples",
+"xyformsweb",
+"platformbackoffice",
+"xyformsatddtests",
+"orbeonweb",
+"consignmenttrackingoccaddon",
+"customerinterestsoccaddon",
+"notificationoccaddon",
+"stocknotificationoccaddon",
+"secaddon"
+
    ],
    "storeFrontExtension": "yacceleratorstorefront",
    "storeFrontWebRoot": "/yacceleratorstorefront",
@@ -22,9 +106,7 @@
             "value": "test.property.2.value"
         }
     ],
-   "project": "ps1b",
    "recipe": "pipeline_b2c_dockerized",
-   "resultingImageVersion": "ps1b",    
    "aspects": [
         {
             "name": "backgroundProcessing",
@@ -47,7 +129,33 @@
                     "value": "acc.2.value"
                 }                
             ]
-        }       
+        },
+        {
+            "name": “backoffice”,
+            "properties": [
+                {
+                    "key": "acc.test.property.1",
+                    "value": "acc.1.value"
+                },
+                {
+                    "key": "acc.test.property.2",
+                    "value": "acc.2.value"
+                }                
+            ]
+        } ,
+        {
+            "name": “hac”,
+            "properties": [
+                {
+                    "key": "acc.test.property.1",
+                    "value": "acc.1.value"
+                },
+                {
+                    "key": "acc.test.property.2",
+                    "value": "acc.2.value"
+                }                
+            ]
+        }              
     ]
 }
 
