@@ -52,6 +52,61 @@
                     "contextPath": "/backoffice"
                 }
             ]
+        },
+        {
+            "name": "backoffice",
+            "properties": [
+				{
+                    "key": "test.property.1",
+                    "value": "test.property-1-value-prod-backoffice",
+                    "persona": "Development"
+                },
+                {
+                    "key": "test.property.2",
+                    "value": "test.property-2-value-backoffice"
+                }
+            ],
+            "webapps": [
+                {
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "backoffice",
+                    "contextPath": ""
+                }
+            ]
+        },
+        {
+            "name": "accstorefront",
+            "properties": [
+                {
+                    "key": "spring.session.enabled",
+                    "value": "true"
+                },
+                {
+                    "key":"storefrontContextRoot",
+                    "value":""
+                }
+            ],
+            "webapps": [
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "yacceleratorstorefront",
+                    "contextPath": "/yacceleratorstorefront"
+                },
+                {
+                    "name": "acceleratorservices",
+                    "contextPath": "/acceleratorservices"
+                }
+            ]
         }
     ]
 }
