@@ -1,4 +1,5 @@
-{   "commerceSuiteVersion": "6.7.0.1",
+{
+    "commerceSuiteVersion": "6.7.0.1",
     "extensions": [
         "mcc",
         "adaptivesearchsolr",
@@ -124,5 +125,92 @@
         }
     ],
     "storeFrontExtension": "yacceleratorstorefront",
-    "storeFrontWebRoot": "/yacceleratorstorefront"
+    "storeFrontWebRoot": "/yacceleratorstorefront",  
+	"properties": [
+        
+        {
+            "key": "test.property.1",
+            "value": "test-property-1-value-dev",
+            "persona": "Development"
+        },
+        {
+            "key": "test.property.1",
+            "value": "test-property-1-value"
+        },
+        {
+            "key": "test.property.2",
+            "value": "test-property-2-value"
+        }
+    ],
+    "aspects": [
+        {
+            "name": "backoffice",
+            "properties": [
+				{
+                    "key": "test.property.1",
+                    "value": "test.property-1-value-prod-backoffice",
+                    "persona": "Development"
+                },
+                {
+                    "key": "test.property.2",
+                    "value": "test.property-2-value-backoffice"
+                }
+            ],
+            "webapps": [
+                {
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "backoffice",
+                    "contextPath": ""
+                }
+            ]
+        },
+        {
+            "name": "accstorefront",
+            "properties": [
+                {
+                    "key": "spring.session.enabled",
+                    "value": "true"
+                },
+                {
+                    "key":"storefrontContextRoot",
+                    "value":""
+                }
+            ],
+            "webapps": [
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "yacceleratorstorefront",
+                    "contextPath": "/yacceleratorstorefront"
+                },
+                {
+                    "name": "acceleratorservices",
+                    "contextPath": "/acceleratorservices"
+                }
+            ]
+        },
+        {
+            "name": "backgroundProcessing",
+            "properties": [],
+            "webapps": [
+                {
+                    "name": "hac",
+                    "contextPath": ""
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                }
+            ]
+        }
+    ]
 }
