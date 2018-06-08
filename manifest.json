@@ -1,159 +1,96 @@
 {
-   "commerceSuiteVersion": "6.7.0.1",
-   "extensions": [
-       "mcc",
-"adaptivesearchsolr",
-"adaptivesearchbackoffice",
-"adaptivesearchsamplesaddon",
-"adaptivesearchwebservices",
-"commerceservicesbackoffice",
-"solrfacetsearchbackoffice",
-"solrserver",
-"yacceleratorcockpits",
-"yacceleratorinitialdata",
-"yacceleratorfulfilmentprocess",
-"yacceleratorstorefront",
-"ycommercewebservices",
-"ycommercewebservicestest",
-"electronicsstore",
-"apparelstore",
-"captchaaddon",
-"acceleratorwebservicesaddon",
-"commerceorgsamplesaddon",
-"orderselfserviceaddon",
-"rulebuilderbackoffice",
-"couponbackoffice",
-"droolsruleengineservices",
-"couponfacades",
-"promotionenginesamplesaddon",
-"assistedservicestorefront",
-"assistedservicewebservices",
-"assistedserviceyprofileaddon",
-"assistedservicecustomerinterestsaddon",
-"assistedservicepromotionaddon",
-"customerticketingaddon",
-"customersupportbackoffice",
-"hybrisanalyticsaddon",
-"eventtrackingwsaddon",
-"profiletagaddon",
-"profileservices",
-"yaasconfigurationbackoffice",
-"textfieldconfiguratortemplatebackoffice",
-"textfieldconfiguratortemplateaddon",
-"cmswebservices",
-"smarteditwebservices",
-"cmssmarteditwebservices",
-"permissionswebservices",
-"smarteditaddon",
-"cmssmartedit",
-"cmsbackoffice",
-"cmsoccaddon",
-"consignmenttrackingaddon",
-"consignmenttrackingmock",
-"consignmenttrackingbackoffice",
-"notificationaddon",
-"customerinterestsaddon",
-"stocknotificationaddon",
-"configurablebundleaddon",
-"personalizationcmsweb",
-"personalizationsmartedit",
-"personalizationpromotionssmartedit",
-"personalizationsampledataaddon",
-"personalizationyprofile",
-"personalizationpromotions",
-"personalizationpromotionsweb",
-"personalizationservicesbackoffice",
-"personalizationpromotionsbackoffice",
-"personalizationcmsbackoffice",
-"personalizationintegrationbackoffice",
-"personalizationsearchbackoffice",
-"personalizationsearchsmartedit",
-"personalizationsearchweb",
-"personalizationsearchsamplesaddon",
-"personalizationyprofilesampledataaddon",
-"assistedserviceatddtests",
-"promotionengineatddtests",
-"textfieldconfiguratortemplateatddtests",
-"configurablebundleatddtests",
-"configurablebundlecockpits",
-"pcmbackofficesamplesaddon",
-"b2cangularaddon",
-"xyformscockpits",
-"xyformsbackoffice",
-"xyformsstorefrontcommons",
-"xyformssamples",
-"xyformsweb",
-"platformbackoffice",
-"xyformsatddtests",
-"orbeonweb",
-"consignmenttrackingoccaddon",
-"customerinterestsoccaddon",
-"notificationoccaddon",
-"stocknotificationoccaddon",
-"secaddon"
-
-   ],
-   "storeFrontExtension": "yacceleratorstorefront",
-   "storeFrontWebRoot": "/yacceleratorstorefront",
-   "properties": [
+    "commerceSuiteVersion": "6.7.0.1",
+    "extensions": [
+        "backoffice",
+        "platformbackoffice",
+        "electronicsstore",
+        "privacyoverlayeraddon"
+    ],    
+	"properties": [
+        
         {
             "key": "test.property.1",
-            "value": "test.property.1.value"
+            "value": "test-property-1-value-dev",
+            "persona": "Development"
+        },
+        {
+            "key": "test.property.1",
+            "value": "test-property-1-value"
         },
         {
             "key": "test.property.2",
-            "value": "test.property.2.value"
+            "value": "test-property-2-value"
         }
     ],
-   "recipe": "pipeline_b2c_dockerized",
-   "aspects": [
+    "aspects": [
         {
-            "name": "backgroundProcessing",
+            "name": "backoffice",
             "properties": [
+				{
+                    "key": "test.property.1",
+                    "value": "test.property-1-value-prod-backoffice",
+                    "persona": "Development"
+                },
                 {
-                    "key": "cluster.node.groups",
-                    "value": "backgroundProcessing"
-                }              
+                    "key": "test.property.2",
+                    "value": "test.property-2-value-backoffice"
+                }
+            ],
+            "webapps": [
+                {
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "backoffice",
+                    "contextPath": ""
+                }
             ]
         },
         {
             "name": "accstorefront",
             "properties": [
                 {
-                    "key": "acc.test.property.1",
-                    "value": "acc.1.value"
+                    "key": "spring.session.enabled",
+                    "value": "true"
                 },
                 {
-                    "key": "acc.test.property.2",
-                    "value": "acc.2.value"
-                }                
+                    "key":"storefrontContextRoot",
+                    "value":""
+                }
+            ],
+            "webapps": [
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "yacceleratorstorefront",
+                    "contextPath": "/yacceleratorstorefront"
+                },
+                {
+                    "name": "acceleratorservices",
+                    "contextPath": "/acceleratorservices"
+                }
             ]
         },
         {
-            "name": "backoffice",
-            "properties": [
+            "name": "backgroundProcessing",
+            "properties": [],
+            "webapps": [
                 {
-                    "key": "acc.test.property.1",
-                    "value": "acc.1.value"
+                    "name": "hac",
+                    "contextPath": ""
                 },
                 {
-                    "key": "acc.test.property.2",
-                    "value": "acc.2.value"
-                }                
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                }
             ]
-        } ,
-        {
-            "name": "backoffice",
-            "properties": [
-                {
-                    "key": "acc.test.property.1",
-                    "value": "acc.1.value"
-                },
-                {
-                    "key": "acc.test.property.2",
-                    "value": "acc.2.value"
-                }                
-            ]
-        }              
+        }
     ]
 }
