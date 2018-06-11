@@ -63,14 +63,5 @@
                 }
             ]
         }
-    ],
-    "tests": {
-        "extensions": ["kiwi", "tiger"],
-        "annotations": ["UnitTests", "IntegrationTests"],
-        "packages": ["de.hybris.infra.*"]
-    },
-    "webTests": {
-        "extensions": ["yacceleratorstorefront"],
-        "excludedPackages": ["de.hybris.platform.*"]
-    }
+    ]
 }
