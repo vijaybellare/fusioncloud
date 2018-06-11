@@ -131,7 +131,7 @@
         {
             "key": "test.property.1",
             "value": "test-property-1-value-dev",
-            "persona": "Development"
+            "persona": "development"
         },
         {
             "key": "test.property.1",
@@ -149,7 +149,7 @@
 				{
                     "key": "test.property.1",
                     "value": "test.property-1-value-prod-backoffice",
-                    "persona": "Development"
+                    "persona": "development"
                 },
                 {
                     "key": "test.property.2",
